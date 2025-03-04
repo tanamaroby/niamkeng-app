@@ -21,7 +21,7 @@ export const NIAM_CARDS: NiamCardProps[] = [
     lines: [
       "Di Shen Shier Ba",
       "Dor Jee",
-      "Syong Ba",
+      "Syong Bo",
       "Rapp Der",
       "Jom Ba La",
       "Xiang Cher Lo",
