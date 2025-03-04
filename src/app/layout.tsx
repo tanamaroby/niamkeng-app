@@ -8,8 +8,8 @@ const font = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Niamkeng Web App",
-  description: "Created for family",
+  title: "35 佛",
+  description: "35 Buddha",
 };
 
 export default function RootLayout({
