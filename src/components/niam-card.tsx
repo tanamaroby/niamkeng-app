@@ -1,31 +1,39 @@
+import { cn } from "@/lib/utils";
 import { FC } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { CardContent, CardHeader, CardTitle } from "./ui/card";
 
 export interface NiamCardProps {
   title: string;
-  chinese: string;
+  chinese?: string;
   lines: string[];
+  linesClassname?: string;
 }
 
-const NiamCard: FC<NiamCardProps> = ({ title, chinese, lines }) => {
+const NiamCard: FC<NiamCardProps> = ({
+  title,
+  chinese,
+  lines,
+  linesClassname,
+}) => {
   return (
-    <Card className="w-full">
+    <div className="flex flex-col gap-4 items-center justify-center p-4 rounded-lg border w-full">
       <CardHeader className="flex flex-col items-center justify-center text-center">
         <CardTitle className="text-2xl">{title}</CardTitle>
-        <CardDescription>{chinese}</CardDescription>
+        {chinese && <p className="text-sm">{chinese}</p>}
       </CardHeader>
       <CardContent className="flex flex-col items-center gap-1 justify-center">
         {lines.map((line) => {
-          return <p key={`${title}-${line}`}>{line}</p>;
+          return (
+            <p
+              className={cn(linesClassname, "font-bold")}
+              key={`${title}-${line}`}
+            >
+              {line}
+            </p>
+          );
         })}
       </CardContent>
-    </Card>
+    </div>
   );
 };
 

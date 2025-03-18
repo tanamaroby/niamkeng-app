@@ -1,6 +1,6 @@
 import { NiamCardProps } from "@/components/niam-card";
 
-export const NIAM_CARDS: NiamCardProps[] = [
+export const BUDDHA_35: NiamCardProps[] = [
   {
     title: "1",
     chinese: "玖丹迪得因夏巴扎玖巴央达 巴作比桑吉夏迦特巴拉 香擦洛",
@@ -270,5 +270,136 @@ export const NIAM_CARDS: NiamCardProps[] = [
       "Ger Bo La",
       "Xiang Cher Lo",
     ],
+  },
+];
+
+export const TA_CIA_CHE_YIN: NiamCardProps[] = [
+  {
+    title: "1",
+    lines: ["Om A Hung", "Hri Dichen", "Barwa", "Wangke", "Phopcongte"],
+  },
+  {
+    title: "2",
+    lines: [
+      "Distong Soshor",
+      "Stokpe Yishike",
+      "Machiak",
+      "Dirden",
+      "Padmi",
+      "Rongzienli",
+    ],
+  },
+  {
+    title: "3",
+    lines: ["Doroi Nyema", "Nongwa", "Chienpupel"],
+  },
+  {
+    title: "4",
+    lines: ["Chierke Snowa", "Thayi", "Dorjichiuh"],
+  },
+  {
+    title: "5",
+    lines: ["Jiurten", "Wangshiug", "Thurgyi", "Gyichiaikoeug"],
+  },
+  {
+    title: "6",
+    lines: ["Pedma", "Zielpo", "Korendi", "Ngawangjer"],
+  },
+  {
+    title: "7",
+    lines: ["Snowcet", "Zelnon", "Wangchien", "Heireka"],
+  },
+  {
+    title: "8",
+    lines: ["Songva", "Yishi", "Banzer", "Warahe"],
+  },
+  {
+    title: "9",
+    lines: ["Dimchok", "Dorpe", "Jelpo", "Dichienter"],
+  },
+  {
+    title: "10",
+    lines: ["Mali", "Skiergi", "Yetchok", "Regsiegma"],
+  },
+  {
+    title: "11",
+    lines: ["Chiokten", "Siapgi", "Wangsiug", "Distongker"],
+  },
+  {
+    title: "12",
+    lines: ["Nomzet", "Dorje", "Huawo", "Dagichook"],
+  },
+  {
+    title: "13",
+    lines: ["Snongstong", "Nyenpa", "Chienpu", "Ngonginyietter"],
+  },
+  {
+    title: "14",
+    lines: ["Dorje", "Skeye", "Kergi", "Cetsemyo"],
+  },
+  {
+    title: "15",
+    lines: [
+      "Garmet",
+      "Shongke Zetdi",
+      "Kemsemgeg",
+      "Ozher Merpu",
+      "Kurendi",
+      "Yonglaciet",
+    ],
+  },
+  {
+    title: "16",
+    lines: [
+      "Cezi Tongcet",
+      "Yojong",
+      "Dutpersieg",
+      "Dorje",
+      "Chiakpa",
+      "Chienpu",
+      "Thukinae",
+    ],
+  },
+  {
+    title: "17",
+    lines: [
+      "Nemnyi Nguceg",
+      "Dotgi",
+      "Chiugcoliong",
+      "Dorje Scerkye",
+      "Ziappa Chenpoyi",
+    ],
+  },
+  {
+    title: "18",
+    lines: [
+      "Snowcet Diva",
+      "Chenpor",
+      "Domsiegpaa",
+      "Thayi Ziumcher",
+      "Chawe Rogerciet",
+    ],
+  },
+  {
+    title: "19",
+    lines: [
+      "Terkye Kongwe",
+      "Sina Zenziege",
+      "Remzen Chasem",
+      "Wongke Tachola",
+    ],
+  },
+  {
+    title: "20",
+    lines: [
+      "Kipi Solwa",
+      "Debsol Singyilob",
+      "Chugten Nguceg",
+      "Dotgi Pelmthatag",
+    ],
+  },
+  {
+    title: "21",
+    lines: ["Tugmet", "Wongte", "Sietpe", "Ngucherceg"],
   },
 ];

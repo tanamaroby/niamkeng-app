@@ -11,12 +11,12 @@ const Counter: FC = () => {
     <div className="flex flex-col gap-4 items-center justify-center">
       <div className="flex gap-12 items-center justify-center">
         <PlusCircle
-          size={120}
+          size={100}
           className="hover:scale-105 transition-transform hover:cursor-pointer"
           onClick={() => setCount(count + 1)}
         />
         <MinusCircle
-          size={120}
+          size={100}
           className="hover:scale-105 transition-transform hover:cursor-pointer"
           onClick={() => setCount(count - 1)}
         />
