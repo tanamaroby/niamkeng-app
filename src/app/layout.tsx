@@ -20,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${font.className} antialiased dark flex flex-col min-h-screen`}
-      >
+      <body className={`${font.className} antialiased dark flex flex-col`}>
         <Image
           height="1024"
           width="760"

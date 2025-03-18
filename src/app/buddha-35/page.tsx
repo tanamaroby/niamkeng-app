@@ -14,6 +14,7 @@ export default function Buddha35Page() {
           <MoveLeft /> Back to home
         </Button>
       </Link>
+      <p className="text-xl font-bold text-center">35 BUDDHA</p>
       <div className="flex flex-col gap-2">
         <p className="text-lg font-semibold text-center">Audio Source</p>
         <audio controls className="w-full">
