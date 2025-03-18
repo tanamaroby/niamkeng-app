@@ -9,8 +9,8 @@ const font = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "My KBP",
-  description: "Hub for KBP Resources",
+  title: "FBC",
+  description: "FBC Resources",
 };
 
 export default function RootLayout({
