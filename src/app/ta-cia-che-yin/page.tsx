@@ -2,7 +2,7 @@ import Counter from "@/components/counter";
 import NiamCard from "@/components/niam-card";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 import { Button } from "@/components/ui/button";
-import { TA_CIA_CHE_YIN } from "@/lib/constants";
+import { TA_CIA_CHE_YIN, TA_CIA_CHE_YIN_COOKIE_KEY } from "@/lib/constants";
 import { MoveLeft } from "lucide-react";
 import Link from "next/link";
 
@@ -33,7 +33,7 @@ export default function TaCiaCheYinPage() {
           );
         })}
       </div>
-      <Counter />
+      <Counter cookieKey={TA_CIA_CHE_YIN_COOKIE_KEY} />
       <ScrollToTopButton />
     </div>
   );

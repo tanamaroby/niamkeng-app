@@ -1,5 +1,8 @@
 import { NiamCardProps } from "@/components/niam-card";
 
+export const BUDDHA_35_COOKIE_KEY = "buddha-35-count";
+export const TA_CIA_CHE_YIN_COOKIE_KEY = "ta-cia-che-yin-count";
+
 export const BUDDHA_35: NiamCardProps[] = [
   {
     title: "1",

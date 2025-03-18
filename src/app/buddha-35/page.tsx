@@ -2,7 +2,7 @@ import Counter from "@/components/counter";
 import NiamCard from "@/components/niam-card";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 import { Button } from "@/components/ui/button";
-import { BUDDHA_35 } from "@/lib/constants";
+import { BUDDHA_35, BUDDHA_35_COOKIE_KEY } from "@/lib/constants";
 import { MoveLeft } from "lucide-react";
 import Link from "next/link";
 
@@ -27,7 +27,7 @@ export default function Buddha35Page() {
           return <NiamCard key={`${card.title}-${i}`} {...card} />;
         })}
       </div>
-      <Counter />
+      <Counter cookieKey={BUDDHA_35_COOKIE_KEY} />
       <ScrollToTopButton />
     </div>
   );
