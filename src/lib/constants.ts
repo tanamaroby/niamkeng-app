@@ -2,6 +2,7 @@ import { NiamCardProps } from "@/components/niam-card";
 
 export const BUDDHA_35_COOKIE_KEY = "buddha-35-count";
 export const TA_CIA_CHE_YIN_COOKIE_KEY = "ta-cia-che-yin-count";
+export const AKSOBHYABUDDHA_COOKIE_KEY = "aksobhyabuddha-count";
 
 export const BUDDHA_35: NiamCardProps[] = [
   {
@@ -404,5 +405,24 @@ export const TA_CIA_CHE_YIN: NiamCardProps[] = [
   {
     title: "21",
     lines: ["Tugmet", "Wongte", "Sietpe", "Ngucherceg"],
+  },
+];
+
+export const AKSOBHYABUDDHA: NiamCardProps[] = [
+  {
+    title: "1",
+    lines: ["Na mo Rat Na Tra Ya Ya", "Om Kung Ga Ne Kung Ga Ne"],
+  },
+  {
+    title: "2",
+    lines: ["Ro Ca Ne Ro Ca Ne", "Cho Ca Ne Cho Ca Ne"],
+  },
+  {
+    title: "3",
+    lines: ["Cha Sa ne Cha Sa Ne", "Cha Ti Ha Na Cha Ti Ha Na"],
+  },
+  {
+    title: "4",
+    lines: ["Sar Wa Kar Ma Pa Rem Pa Ra Na Mi Sar Wa Sa To Nen Za So H"],
   },
 ];
