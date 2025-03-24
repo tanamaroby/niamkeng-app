@@ -11,7 +11,7 @@ export default function Footer() {
       {/* Right Section */}
       <div className="text-right">
         <p className="text-sm italic text-gray-700">
-          Dedicated to <span className="text-gray-900">Rinpoche</span>
+          To <span className="text-gray-900">Passang Rinpoche</span>
         </p>
         <p className="text-sm">
           For{" "}
