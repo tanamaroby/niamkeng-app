@@ -423,6 +423,6 @@ export const AKSOBHYABUDDHA: NiamCardProps[] = [
   },
   {
     title: "4",
-    lines: ["Sar Wa Kar Ma Pa Rem Pa Ra Na Mi Sar Wa Sa To Nen Za So H"],
+    lines: ["Sar Wa Kar Ma Pa Rem Pa Ra Na Mi Sar Wa Sa To Nen Za So Ha"],
   },
 ];

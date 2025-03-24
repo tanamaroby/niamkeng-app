@@ -1,7 +1,7 @@
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
-import Image from "next/image";
 import "./globals.css";
 
 const font = Jost({
@@ -20,17 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} antialiased dark flex flex-col`}>
-        <Image
-          height={1024}
-          width={760}
-          src="/niam-background.jpeg"
-          alt="Niam Background"
-          loading="lazy"
-          className="opacity-50 -z-10 fixed top-1/2 left-0 -mt-[512px] h-[1024px] w-full object-contain"
-        />
+      <body className={`${font.className} antialiased flex flex-col`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
