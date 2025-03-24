@@ -1,35 +1,31 @@
+import { Play } from "lucide-react";
 import Link from "next/link";
 import { FC } from "react";
 import { Button } from "./ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 interface NavCardProps {
   title: string;
   subtitle: string;
-  content: string;
   href: string;
 }
 
-const NavCard: FC<NavCardProps> = ({ title, subtitle, content, href }) => {
+const NavCard: FC<NavCardProps> = ({ title, subtitle, href }) => {
   return (
-    <Card>
+    <Card className="w-full">
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{subtitle}</CardDescription>
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-col gap-2">
+            <CardTitle>{title}</CardTitle>
+            <CardDescription>{subtitle}</CardDescription>
+          </div>
+          <Link href={href}>
+            <Button size="icon" className="rounded-full">
+              <Play fill="white" />
+            </Button>
+          </Link>
+        </div>
       </CardHeader>
-      <CardContent>{content}</CardContent>
-      <CardFooter>
-        <Link href={href} className="w-full">
-          <Button className="w-full">Begin Chanting</Button>
-        </Link>
-      </CardFooter>
     </Card>
   );
 };
