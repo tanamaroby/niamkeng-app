@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Cookies from "js-cookie";
 import { debounce } from "lodash";
 import { MinusCircle, PlusCircle } from "lucide-react";
@@ -30,22 +31,36 @@ const Counter: FC<CounterProps> = ({ cookieKey }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4 items-center justify-center">
-      <div className="flex gap-12 items-center justify-center">
-        <PlusCircle
-          size={100}
-          className="hover:scale-105 transition-transform hover:cursor-pointer"
-          onClick={() => updateCount(count + 1)}
-        />
-        <MinusCircle
-          size={100}
-          className="hover:scale-105 transition-transform hover:cursor-pointer"
-          onClick={() => updateCount(count - 1)}
-        />
+    <div className="flex flex-col items-center justify-center gap-6 p-6 rounded-2xl border border-muted bg-muted/20 shadow-md w-full">
+      <div className="text-center">
+        <p className="text-base text-muted-foreground font-medium">
+          Total Count
+        </p>
+        <motion.p
+          key={count} // triggers animation when count changes
+          initial={{ scale: 0.8, opacity: 1 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          className="text-5xl font-bold text-primary"
+        >
+          {count}
+        </motion.p>
       </div>
-      <div className="flex flex-col items-center justify-center text-center">
-        <p className="text-lg font-semibold">Total Count</p>
-        <p className="text-4xl font-bold">{count}</p>
+      <div className="flex gap-8">
+        <button
+          onClick={() => updateCount(count + 1)}
+          className="p-3 rounded-full border border-primary bg-primary/10 hover:bg-primary/20 active:scale-95 transition-all"
+          aria-label="Increase Count"
+        >
+          <PlusCircle className="w-10 h-10 text-primary" />
+        </button>
+        <button
+          onClick={() => updateCount(count - 1)}
+          className="p-3 rounded-full border border-destructive bg-destructive/10 hover:bg-destructive/20 active:scale-95 transition-all"
+          aria-label="Decrease Count"
+        >
+          <MinusCircle className="w-10 h-10 text-destructive" />
+        </button>
       </div>
     </div>
   );
