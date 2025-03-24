@@ -19,7 +19,7 @@ const NiamCard: FC<NiamCardProps> = ({
     <div
       className={cn(
         "w-full p-6 rounded-xl border border-primary/30 transition-all duration-300",
-        "bg-muted/60 shadow-lg"
+        "bg-muted/70 shadow-lg"
       )}
     >
       <CardHeader className="flex flex-col items-center text-center space-y-1 mb-4">
