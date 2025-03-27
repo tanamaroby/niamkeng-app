@@ -13,7 +13,7 @@ export default function AksobhyabuddhaPage() {
       <Image
         height={1024}
         width={760}
-        src="/niam-background.jpeg"
+        src="/niam-background-blue.jpeg"
         alt="Niam Background"
         loading="lazy"
         className="opacity-40 -z-10 fixed inset-0 h-full w-full object-cover"
