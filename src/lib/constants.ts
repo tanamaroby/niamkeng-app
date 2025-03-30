@@ -1,4 +1,5 @@
 import { NiamCardProps } from "@/components/niam-card";
+import { StaticCardProps } from "@/components/static-card";
 
 export const BUDDHA_35_COOKIE_KEY = "buddha-35-count";
 export const TA_CIA_CHE_YIN_COOKIE_KEY = "ta-cia-che-yin-count";
@@ -426,3 +427,16 @@ export const AKSOBHYABUDDHA: NiamCardProps[] = [
     lines: ["Sar Wa Kar Ma Pa Rem Pa Ra Na Mi Sar Wa Sa To Nen Za So Ha"],
   },
 ];
+
+export const MULTIPLY_MANTRA: StaticCardProps = {
+  title: "Multiply Mantra",
+  lines: [
+    { content: "om tere tere cah meh ki soha", count: 7 },
+
+    {
+      content:
+        "Om san ba ran sam ba ran bor ma na sa rah ma ha jang ba ba hong pad sor ha",
+      count: 3,
+    },
+  ],
+};
