@@ -2,10 +2,11 @@ import { cn } from "@/lib/utils";
 import { startCase, toLower, upperCase } from "lodash";
 import { FC } from "react";
 import { CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Separator } from "./ui/separator";
 
 export interface StaticCardProps {
   title: string;
-  lines: { content: string; count: number }[];
+  lines: { content: string; count?: number }[];
   linesClassname?: string;
 }
 
@@ -16,11 +17,12 @@ const StaticCard: FC<StaticCardProps> = ({ title, lines, linesClassname }) => {
         <CardTitle>{upperCase(title)}</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col items-center gap-2">
-        {lines.map(({ content, count }) => (
+        {lines.map(({ content, count }, i) => (
           <div
             className="flex flex-col gap-1 text-center"
             key={`${content}-${count}`}
           >
+            {i > 0 && <Separator dir="horizontal" />}
             <p
               className={cn(
                 "text-base font-medium text-foreground",
@@ -29,7 +31,9 @@ const StaticCard: FC<StaticCardProps> = ({ title, lines, linesClassname }) => {
             >
               {startCase(toLower(content))}
             </p>
-            <p className="text-sm italic text-muted-foreground">x{count}</p>
+            {count && (
+              <p className="text-sm italic text-muted-foreground">x{count}</p>
+            )}
           </div>
         ))}
       </CardContent>
