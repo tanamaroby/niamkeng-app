@@ -1,8 +1,11 @@
 import NavCard from "@/components/nav-card";
+import StaticCard from "@/components/static-card";
+import { MULTIPLY_MANTRA } from "@/lib/constants";
 
 export default function Home() {
   return (
     <div className="p-4 h-full flex flex-grow items-center justify-center flex-col gap-8">
+      <StaticCard {...MULTIPLY_MANTRA} />
       <p className="text-lg font-semibold text-primary">
         Select a chant to begin your practice
       </p>
