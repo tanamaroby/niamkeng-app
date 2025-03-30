@@ -440,3 +440,33 @@ export const MULTIPLY_MANTRA: StaticCardProps = {
     },
   ],
 };
+
+export const DEDICATION_PRAYER: StaticCardProps = {
+  title: "Dedication Prayer",
+  lines: [
+    {
+      content: "Jiam Pel Hua Wu Cier Ter Chien Pa Tong",
+    },
+    {
+      content: "Ken Te Zong Po Te Yong Te Zen Te",
+    },
+    {
+      content: "Te Ta Ken Kie Zi Hse Dag Stor Sier",
+    },
+    {
+      content: "Ge Wa De Tag Tham Ciet Reb Tef Ngo",
+    },
+    {
+      content: "Ti Shem Siag Per Ziel Wa Tham Ciet Ki",
+    },
+    {
+      content: "Ngo Wa Kong La Chiug Te Fnger Pa Ti",
+    },
+    {
+      content: "Dag Ke Gi Va Ca Wa De Ken Kyong",
+    },
+    {
+      content: "Zong Po Siug Sier Reb Te Fngo Ver Jieh",
+    },
+  ],
+};

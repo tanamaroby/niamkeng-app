@@ -1,6 +1,6 @@
 import NavCard from "@/components/nav-card";
 import StaticCard from "@/components/static-card";
-import { MULTIPLY_MANTRA } from "@/lib/constants";
+import { DEDICATION_PRAYER, MULTIPLY_MANTRA } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -24,6 +24,7 @@ export default function Home() {
         title="Aksobhya Buddha"
         subtitle="The Buddha of Unshakable Resolve"
       />
+      <StaticCard {...DEDICATION_PRAYER} />
     </div>
   );
 }
