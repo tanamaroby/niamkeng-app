@@ -1,9 +1,9 @@
 "use client";
 
-import { Home } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SidebarTrigger } from "./ui/sidebar";
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -32,28 +32,20 @@ const Navbar = () => {
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
+      <SidebarTrigger />
       {/* Left: Logo + Brand */}
-      <div className="flex items-center gap-2">
-        <Image
-          height={36}
-          width={36}
-          src="/navbar-icon.png"
-          alt="FBC Logo"
-          className="rounded-md"
-        />
-        <p className="text-xl font-bold tracking-tight text-secondary">FBC</p>
-      </div>
-
-      {/* Right: Icon Nav */}
-      <div className="flex items-center gap-4">
-        <Link
-          href="/"
-          className="rounded-full p-2 bg-muted active:scale-95 transition-transform text-secondary"
-          aria-label="Home"
-        >
-          <Home className="h-5 w-5" />
-        </Link>
-      </div>
+      <Link href="/" aria-label="Home">
+        <div className="flex items-center gap-2">
+          <Image
+            height={36}
+            width={36}
+            src="/navbar-icon.png"
+            alt="FBC Logo"
+            className="rounded-md"
+          />
+          <p className="text-xl font-bold tracking-tight text-secondary">FBC</p>
+        </div>
+      </Link>
     </div>
   );
 };
