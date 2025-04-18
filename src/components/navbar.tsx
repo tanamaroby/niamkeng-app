@@ -33,7 +33,7 @@ const Navbar = () => {
             <Image
               height={36}
               width={36}
-              src="/navbar-icon.png"
+              src="/Logo.png"
               alt="FBC Logo"
               className="rounded-md"
             />
