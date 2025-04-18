@@ -4,10 +4,10 @@ import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { Inconsolata } from "next/font/google";
 import "./globals.css";
 
-const font = Noto_Sans({
+const font = Inconsolata({
   subsets: ["latin"],
 });
 
