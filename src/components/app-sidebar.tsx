@@ -1,6 +1,6 @@
 "use client";
 
-import { Flower, Home, Star } from "lucide-react";
+import { Flower, Globe, Home, Star } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -28,6 +28,11 @@ const items = [
     title: "Buddha 35",
     url: "/buddha-35",
     icon: Flower,
+  },
+  {
+    title: "Ta Cia Che Yin",
+    url: "/ta-cia-che-yin",
+    icon: Globe,
   },
   {
     title: "Aksobhya Buddha",
