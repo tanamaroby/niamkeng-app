@@ -1,12 +1,13 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import type { Metadata } from "next";
-import { Jost } from "next/font/google";
+import { Inconsolata } from "next/font/google";
 import "./globals.css";
 
-const font = Jost({
+const font = Inconsolata({
   subsets: ["latin"],
 });
 
@@ -21,18 +22,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head />
       <body
         className={`${font.className} antialiased flex flex-col min-h-screen`}
       >
-        <SidebarProvider defaultOpen={false}>
-          <AppSidebar />
-          <main>
-            <Navbar />
-            <main className="flex-grow pt-16">{children}</main>
-            <Footer />
-          </main>
-        </SidebarProvider>
+        <ThemeProvider attribute="class" enableSystem={false}>
+          <SidebarProvider defaultOpen={false}>
+            <AppSidebar />
+            <main className="w-full">
+              <Navbar />
+              <main className="flex-grow">{children}</main>
+              <Footer />
+            </main>
+          </SidebarProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

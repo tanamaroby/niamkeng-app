@@ -18,7 +18,7 @@ const NiamCard: FC<NiamCardProps> = ({
   return (
     <div
       className={cn(
-        "w-full p-6 rounded-xl border border-primary/30 transition-all duration-300",
+        "w-full p-6 rounded-xl border transition-all duration-300",
         "bg-muted/70 shadow-lg"
       )}
     >
@@ -32,7 +32,7 @@ const NiamCard: FC<NiamCardProps> = ({
         {lines.map((line) => (
           <p
             className={cn(
-              "text-base font-medium text-center text-foreground",
+              "text-base font-medium text-center text-foreground uppercase",
               linesClassname
             )}
             key={`${title}-${line}`}

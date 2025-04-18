@@ -13,6 +13,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "@/components/ui/sidebar";
 
 import { cn } from "@/lib/utils";
@@ -42,6 +43,12 @@ const items = [
 
 export function AppSidebar() {
   const pathname = usePathname();
+  const { setOpen, setOpenMobile } = useSidebar();
+
+  const onClick = () => {
+    setOpen(false);
+    setOpenMobile(false);
+  };
 
   return (
     <Sidebar>
@@ -51,7 +58,7 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.title} onClick={onClick}>
                   <SidebarMenuButton asChild>
                     <Link
                       href={item.url}

@@ -1,20 +1,27 @@
 import { cn } from "@/lib/utils";
 import { startCase, toLower, upperCase } from "lodash";
 import { FC } from "react";
-import { CardContent, CardHeader, CardTitle } from "./ui/card";
+import { CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Separator } from "./ui/separator";
 
 export interface StaticCardProps {
   title: string;
+  description?: string;
   lines: { content: string; count?: number }[];
   linesClassname?: string;
 }
 
-const StaticCard: FC<StaticCardProps> = ({ title, lines, linesClassname }) => {
+const StaticCard: FC<StaticCardProps> = ({
+  title,
+  lines,
+  linesClassname,
+  description,
+}) => {
   return (
-    <div className={"w-full p-6 rounded-xl border border-primary"}>
+    <div className={"w-full p-6 rounded-xl border"}>
       <CardHeader className="flex flex-col items-center text-center space-y-1 mb-4">
         <CardTitle>{upperCase(title)}</CardTitle>
+        {description && <CardDescription>{description}</CardDescription>}
       </CardHeader>
       <CardContent className="flex flex-col items-center gap-2">
         {lines.map(({ content, count }, i) => (
@@ -25,7 +32,7 @@ const StaticCard: FC<StaticCardProps> = ({ title, lines, linesClassname }) => {
             {i > 0 && <Separator dir="horizontal" />}
             <p
               className={cn(
-                "text-base font-medium text-foreground",
+                "text-base font-medium text-foreground uppercase",
                 linesClassname
               )}
             >

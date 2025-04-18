@@ -430,6 +430,8 @@ export const AKSOBHYABUDDHA: NiamCardProps[] = [
 
 export const MULTIPLY_MANTRA: StaticCardProps = {
   title: "Multiply Mantra",
+  description:
+    "To be read before proceeding. Opener for the chants to multiply your deeds.",
   lines: [
     { content: "om tere tere cah meh ki soha", count: 7 },
 
@@ -443,6 +445,8 @@ export const MULTIPLY_MANTRA: StaticCardProps = {
 
 export const DEDICATION_PRAYER: StaticCardProps = {
   title: "Dedication Prayer",
+  description:
+    "To direct the merits of your chants. To be read after you have finished chanting.",
   lines: [
     {
       content: "Jiam Pel Hua Wu Cier Ter Chien Pa Tong",

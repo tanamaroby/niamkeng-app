@@ -31,11 +31,9 @@ const Counter: FC<CounterProps> = ({ cookieKey }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-6 p-6 rounded-2xl border border-muted bg-muted/20 shadow-md w-full">
+    <div className="flex flex-col items-center justify-center gap-6 p-6 rounded-2xl border bg-muted/20 shadow-md w-full">
       <div className="text-center">
-        <p className="text-base text-muted-foreground font-medium">
-          Total Count
-        </p>
+        <p className="font-medium">Total Count</p>
         <motion.p
           key={count} // triggers animation when count changes
           initial={{ scale: 0.8, opacity: 1 }}
@@ -56,10 +54,10 @@ const Counter: FC<CounterProps> = ({ cookieKey }) => {
         </button>
         <button
           onClick={() => updateCount(count - 1)}
-          className="p-3 rounded-full border border-destructive bg-destructive/10 hover:bg-destructive/20 active:scale-95 transition-all"
+          className="p-3 rounded-full border border-red-600 bg-destructive/10 hover:bg-destructive/20 active:scale-95 transition-all"
           aria-label="Decrease Count"
         >
-          <MinusCircle className="w-10 h-10 text-destructive" />
+          <MinusCircle className="w-10 h-10 text-red-600" />
         </button>
       </div>
     </div>

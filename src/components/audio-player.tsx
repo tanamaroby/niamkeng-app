@@ -3,6 +3,7 @@
 import { FC, useRef, useState } from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
+import { Button } from "./ui/button";
 
 interface AudioProps {
   src: string;
@@ -22,7 +23,7 @@ const Audio: FC<AudioProps> = ({ src }) => {
 
   return (
     <div className="flex flex-col gap-4 items-center w-full">
-      <p className="text-xl font-bold text-secondary tracking-wider uppercase text-center">
+      <p className="text-xl font-bold tracking-wider uppercase text-center">
         Audio
       </p>
 
@@ -34,19 +35,15 @@ const Audio: FC<AudioProps> = ({ src }) => {
 
       <div className="flex flex-wrap justify-center gap-2">
         {speeds.map((rate) => (
-          <button
+          <Button
             key={rate}
             onClick={() => handleSpeedChange(rate)}
-            className={`px-3 py-1 rounded-full text-sm font-medium border transition-all active:scale-95
-              ${
-                speed === rate
-                  ? "bg-primary text-white border-primary"
-                  : "bg-muted text-foreground border-border"
-              }
+            className={`px-3 py-1 rounded-full text-sm font-medium transition-all active:scale-95
+              ${speed === rate ? "" : "bg-muted-foreground"}
             `}
           >
-            {rate}×
-          </button>
+            <p>{rate}×</p>
+          </Button>
         ))}
       </div>
     </div>
