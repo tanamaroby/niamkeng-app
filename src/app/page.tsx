@@ -1,4 +1,4 @@
-import NavCard from "@/components/nav-card";
+import { ChantTabs } from "@/components/chant-tabs";
 import StaticCard from "@/components/static-card";
 import { DEDICATION_PRAYER, MULTIPLY_MANTRA } from "@/lib/constants";
 import Image from "next/image";
@@ -26,21 +26,7 @@ export default function Home() {
           Additionally, you can select the type of chant from the sidebar.
         </p>
       </div>
-      <NavCard
-        href="/buddha-35"
-        title="35 Buddha"
-        subtitle="The Confession of Downfalls"
-      />
-      <NavCard
-        href="/ta-cia-che-yin"
-        title="Ta Cia Che Yin"
-        subtitle="The Great Compassion Mantra"
-      />
-      <NavCard
-        href="/aksobhyabuddha"
-        title="Aksobhya Buddha"
-        subtitle="The Buddha of Unshakable Resolve"
-      />
+      <ChantTabs />
       <StaticCard {...DEDICATION_PRAYER} />
     </div>
   );
