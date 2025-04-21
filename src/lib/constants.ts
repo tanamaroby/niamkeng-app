@@ -5,6 +5,7 @@ export const BUDDHA_35_COOKIE_KEY = "buddha-35-count";
 export const TA_CIA_CHE_YIN_COOKIE_KEY = "ta-cia-che-yin-count";
 export const AKSOBHYABUDDHA_COOKIE_KEY = "aksobhyabuddha-count";
 export const PADMASAMBHAVA_COOKIE_KEY = "padmasambhava-count";
+export const XIONG_CHER_SAN_HUA_COOKIE_KEY = "xiong-cher-san-hua-count";
 
 export const BUDDHA_35: NiamCardProps[] = [
   {
@@ -440,6 +441,15 @@ export const MULTIPLY_MANTRA: StaticCardProps = {
       content:
         "Om san ba ran sam ba ran bor ma na sa rah ma ha jang ba ba hong pad sor ha",
       count: 3,
+    },
+  ],
+};
+
+export const XIONG_CHER_SAN_HUA: StaticCardProps = {
+  lines: [
+    {
+      content:
+        "Xiong Cher San Hua San Hua Qian Bo Sa Yer Syong Bola Xiang Cher Lo Choto Skiap Shen Cher Wo",
     },
   ],
 };

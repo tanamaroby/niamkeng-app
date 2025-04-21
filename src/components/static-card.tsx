@@ -5,7 +5,7 @@ import { CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Separator } from "./ui/separator";
 
 export interface StaticCardProps {
-  title: string;
+  title?: string;
   description?: string;
   lines: { content: string; count?: number }[];
   linesClassname?: string;
@@ -19,10 +19,12 @@ const StaticCard: FC<StaticCardProps> = ({
 }) => {
   return (
     <div className={"w-full p-6 rounded-xl border"}>
-      <CardHeader className="flex flex-col items-center text-center space-y-1 mb-4">
-        <CardTitle>{upperCase(title)}</CardTitle>
-        {description && <CardDescription>{description}</CardDescription>}
-      </CardHeader>
+      {(title || description) && (
+        <CardHeader className="flex flex-col items-center text-center space-y-1 mb-4">
+          {title && <CardTitle>{upperCase(title)}</CardTitle>}
+          {description && <CardDescription>{description}</CardDescription>}
+        </CardHeader>
+      )}
       <CardContent className="flex flex-col items-center gap-2">
         {lines.map(({ content, count }, i) => (
           <div

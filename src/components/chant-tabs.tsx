@@ -25,6 +25,11 @@ export function ChantTabs() {
         title="Padmasambhava Mantra"
         subtitle="Guru Rinpoche Padmasambhava union of wisdom and compassion"
       />
+      <NavCard
+        href="/xiong-cher-san-hua"
+        title="Xiong Cher San Hua"
+        subtitle="Purification and Blessings Mantra"
+      />
     </div>
   );
 }

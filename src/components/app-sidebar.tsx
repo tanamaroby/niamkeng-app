@@ -1,6 +1,13 @@
 "use client";
 
-import { Flower, Globe, Home, Star, StretchHorizontal } from "lucide-react";
+import {
+  Flower,
+  Globe,
+  Home,
+  School,
+  Star,
+  StretchHorizontal,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -43,6 +50,11 @@ const items = [
     title: "Padmasambhava",
     url: "/om-a-hung",
     icon: StretchHorizontal,
+  },
+  {
+    title: "Xiong Cher San Hua",
+    url: "/xiong-cher-san-hua",
+    icon: School,
   },
 ];
 
