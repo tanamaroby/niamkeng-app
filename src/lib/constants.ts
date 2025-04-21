@@ -296,7 +296,7 @@ export const TA_CIA_CHE_YIN: NiamCardProps[] = [
   },
   {
     title: "3",
-    lines: ["Doroi Nyema", "Nongwa", "Chienpupel"],
+    lines: ["Dorje Nyema", "Nongwa", "Chienpupel"],
   },
   {
     title: "4",
@@ -362,7 +362,7 @@ export const TA_CIA_CHE_YIN: NiamCardProps[] = [
       "Dorje",
       "Chiakpa",
       "Chienpu",
-      "Thukinae",
+      "Thukinai",
     ],
   },
   {
