@@ -4,6 +4,7 @@ import { StaticCardProps } from "@/components/static-card";
 export const BUDDHA_35_COOKIE_KEY = "buddha-35-count";
 export const TA_CIA_CHE_YIN_COOKIE_KEY = "ta-cia-che-yin-count";
 export const AKSOBHYABUDDHA_COOKIE_KEY = "aksobhyabuddha-count";
+export const PADMASAMBHAVA_COOKIE_KEY = "padmasambhava-count";
 
 export const BUDDHA_35: NiamCardProps[] = [
   {

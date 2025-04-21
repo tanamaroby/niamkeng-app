@@ -20,6 +20,11 @@ export function ChantTabs() {
         title="Aksobhya Buddha"
         subtitle="The Buddha of Unshakable Resolve"
       />
+      <NavCard
+        href="/om-a-hung"
+        title="Padmasambhava Mantra"
+        subtitle="Guru Rinpoche Padmasambhava union of wisdom and compassion"
+      />
     </div>
   );
 }
