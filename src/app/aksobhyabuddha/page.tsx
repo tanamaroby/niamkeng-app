@@ -21,6 +21,11 @@ export default function AksobhyabuddhaPage() {
       <BackLink href="/" />
       <ChantTitle>AKSOBHYABUDDHA DHARANI SUTRA</ChantTitle>
       <Audio src="/aksobhyabuddha.mp3" />
+      <Audio
+        src="/aksobhyabuddha-song.mp3"
+        title="Song Version"
+        titleClassname="text-lg tracking-wide font-semibold"
+      />
       <div className="flex flex-col gap-4 items-center justify-center">
         {AKSOBHYABUDDHA.map((card, i) => {
           return (

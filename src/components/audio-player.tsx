@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { FC, useRef, useState } from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
@@ -7,9 +8,11 @@ import { Button } from "./ui/button";
 
 interface AudioProps {
   src: string;
+  title?: string;
+  titleClassname?: string;
 }
 
-const Audio: FC<AudioProps> = ({ src }) => {
+const Audio: FC<AudioProps> = ({ src, title = "Audio", titleClassname }) => {
   const playerRef = useRef<any>(null);
   const [speed, setSpeed] = useState(1.0);
   const speeds = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0];
@@ -23,8 +26,13 @@ const Audio: FC<AudioProps> = ({ src }) => {
 
   return (
     <div className="flex flex-col gap-4 items-center w-full">
-      <p className="text-xl font-bold tracking-wider uppercase text-center">
-        Audio
+      <p
+        className={cn(
+          "text-xl font-bold tracking-wider uppercase text-center",
+          titleClassname
+        )}
+      >
+        {title}
       </p>
 
       <AudioPlayer
