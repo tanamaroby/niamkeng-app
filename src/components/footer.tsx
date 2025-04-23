@@ -5,10 +5,6 @@ export default function Footer() {
         <span>Dedicated to</span>
         <span className="font-extrabold text-base">Passang Rinpoche</span>
       </div>
-      <p className="font-semibold tracking-wide text-muted-foreground">
-        Made by <span className="font-bold">Roby Tanama</span>
-      </p>
-
       <div className="flex items-center gap-1">
         <span className="text-sm">From</span>
         <span className="text-red-500 font-medium animate-pulse hover:animate-none transition">
