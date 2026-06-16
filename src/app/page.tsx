@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="p-4 h-full flex flex-grow items-center justify-center flex-col gap-8">
+    <div className="p-4 h-full flex grow items-center justify-center flex-col gap-8">
       <p className="text-2xl font-bold">FBC Chant Application</p>
       <div className="flex flex-col gap-2 items-center justify-center">
         <Image
@@ -13,7 +13,8 @@ export default function Home() {
           alt="Passang Rinpoche Profile"
           height={500}
           width={300}
-          className="rounded-lg shadow-md ring-2 ring-accent-foreground"
+          priority
+          className="rounded-lg shadow-md ring-2 ring-accent-foreground w-75 h-125 object-cover"
         />
         <p className="italic">Passang Rinpoche</p>
       </div>

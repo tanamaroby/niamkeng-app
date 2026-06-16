@@ -35,7 +35,7 @@ const Navbar = () => {
               width={36}
               src="/Logo.png"
               alt="FBC Logo"
-              className="rounded-md h-auto"
+              className="rounded-md w-9 h-9 object-cover"
             />
             <p className="text-xl font-bold tracking-tight">FBC</p>
           </div>
