@@ -1,7 +1,9 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import { PreferencesProvider } from "@/components/preferences-provider";
 import ServiceWorkerRegister from "@/components/service-worker-register";
+import TextSizeScope from "@/components/text-size-scope";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
@@ -68,17 +70,19 @@ export default function RootLayout({
           "font-sans antialiased flex flex-col min-h-screen"
         )}
       >
-        <ThemeProvider attribute="class" enableSystem={false}>
-          <SidebarProvider defaultOpen={false}>
-            <AppSidebar />
-            <main className="w-full">
-              <Navbar />
-              <main className="grow flex justify-center">
-                <div className="w-full max-w-3xl">{children}</div>
+        <ThemeProvider attribute="class" enableSystem>
+          <PreferencesProvider>
+            <SidebarProvider defaultOpen={false}>
+              <AppSidebar />
+              <main className="w-full">
+                <Navbar />
+                <main className="grow flex justify-center">
+                  <TextSizeScope>{children}</TextSizeScope>
+                </main>
+                <Footer />
               </main>
-              <Footer />
-            </main>
-          </SidebarProvider>
+            </SidebarProvider>
+          </PreferencesProvider>
         </ThemeProvider>
         <ServiceWorkerRegister />
       </body>

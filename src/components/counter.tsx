@@ -1,5 +1,6 @@
 "use client";
 
+import { COUNTER_RESET_CHANNEL } from "@/lib/preferences";
 import { motion } from "framer-motion";
 import Cookies from "js-cookie";
 import { debounce } from "lodash";
@@ -16,6 +17,12 @@ const Counter: FC<CounterProps> = ({ cookieKey }) => {
   useEffect(() => {
     const savedCount = Cookies.get(cookieKey);
     if (savedCount != undefined) setCount(parseInt(savedCount, 10));
+  }, []);
+
+  useEffect(() => {
+    const channel = new BroadcastChannel(COUNTER_RESET_CHANNEL);
+    channel.onmessage = () => setCount(0);
+    return () => channel.close();
   }, []);
 
   const debouncedUpdateCount = useCallback(

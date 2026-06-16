@@ -5,6 +5,7 @@ import {
   Globe,
   Home,
   School,
+  Settings,
   Star,
   StretchHorizontal,
 } from "lucide-react";
@@ -58,6 +59,11 @@ const items = [
     title: "Xiong Cher San Hua",
     url: "/xiong-cher-san-hua",
     icon: School,
+  },
+  {
+    title: "Settings",
+    url: "/settings",
+    icon: Settings,
   },
 ];
 

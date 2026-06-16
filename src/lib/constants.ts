@@ -7,6 +7,14 @@ export const AKSOBHYABUDDHA_COOKIE_KEY = "aksobhyabuddha-count";
 export const PADMASAMBHAVA_COOKIE_KEY = "padmasambhava-count";
 export const XIONG_CHER_SAN_HUA_COOKIE_KEY = "xiong-cher-san-hua-count";
 
+export const ALL_COUNTER_COOKIE_KEYS = [
+  BUDDHA_35_COOKIE_KEY,
+  TA_CIA_CHE_YIN_COOKIE_KEY,
+  AKSOBHYABUDDHA_COOKIE_KEY,
+  PADMASAMBHAVA_COOKIE_KEY,
+  XIONG_CHER_SAN_HUA_COOKIE_KEY,
+];
+
 export const BUDDHA_35: NiamCardProps[] = [
   {
     title: "1",

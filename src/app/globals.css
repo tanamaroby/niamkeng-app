@@ -126,6 +126,22 @@
   }
 }
 
+/* Chant text scaling, controlled by the `data-text-size` attribute set
+   from the Settings page preference (src/components/text-size-scope.tsx). */
+:root {
+  --chant-text-scale: 1;
+}
+[data-text-size="small"] {
+  --chant-text-scale: 0.875;
+}
+[data-text-size="large"] {
+  --chant-text-scale: 1.25;
+}
+.chant-text {
+  font-size: calc(1rem * var(--chant-text-scale));
+  line-height: 1.5;
+}
+
 /* react-h5-audio-player ships its own hardcoded colors; rescope them to
    theme tokens here so the player follows light/dark mode like everything
    else. Scoped under .chant-audio-player for specificity over the

@@ -29,7 +29,7 @@ const NiamCard: FC<NiamCardProps> = ({
         {lines.map((line) => (
           <p
             className={cn(
-              "text-base font-medium text-center text-foreground uppercase tracking-wide",
+              "chant-text font-medium text-center text-foreground uppercase tracking-wide",
               linesClassname
             )}
             key={`${title}-${line}`}

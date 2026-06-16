@@ -1,7 +1,12 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { FC, useRef, useState } from "react";
+import {
+  DEFAULT_PLAYBACK_SPEED,
+  PLAYBACK_SPEEDS,
+  readDefaultPlaybackSpeed,
+} from "@/lib/preferences";
+import { FC, useEffect, useRef, useState } from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { Button } from "./ui/button";
@@ -14,13 +19,27 @@ interface AudioProps {
 
 const Audio: FC<AudioProps> = ({ src, title = "Audio", titleClassname }) => {
   const playerRef = useRef<AudioPlayer>(null);
-  const [speed, setSpeed] = useState(1.0);
-  const speeds = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0];
+  // Starts at the SSR-safe default and syncs from the persisted preference
+  // after mount — these chant pages are statically prerendered, so reading
+  // localStorage up front would make the client's first render disagree
+  // with the server-rendered markup (which button looks "selected").
+  const [speed, setSpeed] = useState(DEFAULT_PLAYBACK_SPEED);
+  const speeds = PLAYBACK_SPEEDS;
+
+  useEffect(() => {
+    setSpeed(readDefaultPlaybackSpeed());
+  }, []);
 
   const handleSpeedChange = (rate: number) => {
     setSpeed(rate);
     if (playerRef.current?.audio?.current) {
       playerRef.current.audio.current.playbackRate = rate;
+    }
+  };
+
+  const handleLoadedMetaData = () => {
+    if (playerRef.current?.audio?.current) {
+      playerRef.current.audio.current.playbackRate = readDefaultPlaybackSpeed();
     }
   };
 
@@ -39,6 +58,7 @@ const Audio: FC<AudioProps> = ({ src, title = "Audio", titleClassname }) => {
         ref={playerRef}
         src={src}
         className="chant-audio-player w-full"
+        onLoadedMetaData={handleLoadedMetaData}
       />
 
       <div className="flex flex-wrap justify-center gap-2">

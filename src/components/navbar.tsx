@@ -8,10 +8,10 @@ import { Button } from "./ui/button";
 import { SidebarTrigger } from "./ui/sidebar";
 
 const Navbar = () => {
-  const { setTheme, theme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
   return (
@@ -39,7 +39,7 @@ const Navbar = () => {
         aria-label="Toggle theme"
         className="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
       >
-        {theme === "dark" ? (
+        {resolvedTheme === "dark" ? (
           <Sun className="h-5 w-5" />
         ) : (
           <Moon className="h-5 w-5" />

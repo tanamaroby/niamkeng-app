@@ -38,7 +38,7 @@ const StaticCard: FC<StaticCardProps> = ({
             {i > 0 && <Separator className="max-w-40" />}
             <p
               className={cn(
-                "text-base font-medium text-foreground uppercase tracking-wide",
+                "chant-text font-medium text-foreground uppercase tracking-wide",
                 linesClassname
               )}
             >
