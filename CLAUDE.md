@@ -86,7 +86,8 @@ work leak into it (they're separate distribution channels).
   an aspect-ratio mismatch warning and the image renders at the wrong size.
 - `next lint` was removed in Next.js 16; lint runs via `eslint .` directly.
 - A handful of pre-existing ESLint `react-hooks` findings (state-set-in-effect
-  in `counter.tsx`/`use-mobile.ts`, impure `Math.random()` in
-  `ui/sidebar.tsx`'s skeleton width) are known and intentionally left as-is
+  in `counter.tsx`/`use-mobile.ts`) are known and intentionally left as-is
   unless asked to fix — they're behavior-affecting hook patterns, not
-  mechanical fixes.
+  mechanical fixes. (The `ui/sidebar.tsx` skeleton-width `Math.random()`
+  purity violation was fixed by moving it into a lazy `useState` initializer
+  instead of `useMemo`.)
