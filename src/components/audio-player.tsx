@@ -13,7 +13,7 @@ interface AudioProps {
 }
 
 const Audio: FC<AudioProps> = ({ src, title = "Audio", titleClassname }) => {
-  const playerRef = useRef<any>(null);
+  const playerRef = useRef<AudioPlayer>(null);
   const [speed, setSpeed] = useState(1.0);
   const speeds = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0];
 
