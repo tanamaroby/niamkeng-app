@@ -25,10 +25,10 @@ const Audio: FC<AudioProps> = ({ src, title = "Audio", titleClassname }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4 items-center w-full">
+    <div className="flex flex-col gap-4 items-center w-full p-5 sm:p-6 rounded-2xl border bg-card shadow-sm">
       <p
         className={cn(
-          "text-xl font-bold tracking-wider uppercase text-center",
+          "font-serif text-lg font-semibold tracking-wide uppercase text-center text-foreground",
           titleClassname
         )}
       >
@@ -38,19 +38,19 @@ const Audio: FC<AudioProps> = ({ src, title = "Audio", titleClassname }) => {
       <AudioPlayer
         ref={playerRef}
         src={src}
-        className="w-full max-w-xl rounded-xl shadow-md"
+        className="chant-audio-player w-full"
       />
 
       <div className="flex flex-wrap justify-center gap-2">
         {speeds.map((rate) => (
           <Button
             key={rate}
+            size="sm"
+            variant={speed === rate ? "default" : "outline"}
             onClick={() => handleSpeedChange(rate)}
-            className={`px-3 py-1 rounded-full text-sm font-medium transition-all active:scale-95
-              ${speed === rate ? "" : "bg-muted-foreground"}
-            `}
+            className="rounded-full px-3 active:scale-95"
           >
-            <p>{rate}×</p>
+            {rate}×
           </Button>
         ))}
       </div>

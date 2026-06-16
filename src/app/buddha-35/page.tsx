@@ -1,27 +1,20 @@
 import Audio from "@/components/audio-player";
 import BackLink from "@/components/back-link";
-import ChantTitle from "@/components/chant-title";
+import ChantHero from "@/components/chant-hero";
 import Counter from "@/components/counter";
 import NiamCard from "@/components/niam-card";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 import { BUDDHA_35, BUDDHA_35_COOKIE_KEY } from "@/lib/constants";
-import Image from "next/image";
 
 export default function Buddha35Page() {
   return (
-    <div className="p-4 pt-0 flex flex-col gap-4">
-      <Image
-        height={1024}
-        width={760}
-        src="/niam-background.jpeg"
-        alt="Niam Background"
-        loading="lazy"
-        className="opacity-40 -z-10 fixed inset-0 h-full w-full object-cover"
-      />
+    <div className="p-4 flex flex-col gap-6 items-center">
       <BackLink href="/" />
-      <ChantTitle>35 BUDDHA</ChantTitle>
+      <ChantHero image={{ src: "/niam-background.jpeg", alt: "35 Buddha" }}>
+        35 Buddha
+      </ChantHero>
       <Audio src="/35-audio.mp3" />
-      <div className="flex flex-col gap-4 items-center justify-center">
+      <div className="w-full flex flex-col gap-4 items-center">
         {BUDDHA_35.map((card, i) => {
           return <NiamCard key={`${card.title}-${i}`} {...card} />;
         })}

@@ -18,23 +18,27 @@ const StaticCard: FC<StaticCardProps> = ({
   description,
 }) => {
   return (
-    <div className={"w-full p-6 rounded-xl border"}>
+    <div className="w-full p-6 sm:p-7 rounded-2xl border bg-card shadow-sm">
       {(title || description) && (
-        <CardHeader className="flex flex-col items-center text-center space-y-1 mb-4">
-          {title && <CardTitle>{upperCase(title)}</CardTitle>}
+        <CardHeader className="flex flex-col items-center text-center gap-1 mb-4 px-0">
+          {title && (
+            <CardTitle className="font-serif text-xl font-semibold text-primary">
+              {upperCase(title)}
+            </CardTitle>
+          )}
           {description && <CardDescription>{description}</CardDescription>}
         </CardHeader>
       )}
-      <CardContent className="flex flex-col items-center gap-2">
+      <CardContent className="flex flex-col items-center gap-3 px-0">
         {lines.map(({ content, count }, i) => (
           <div
-            className="flex flex-col gap-1 text-center"
+            className="w-full flex flex-col gap-2 items-center text-center"
             key={`${content}-${count}`}
           >
-            {i > 0 && <Separator dir="horizontal" />}
+            {i > 0 && <Separator className="max-w-40" />}
             <p
               className={cn(
-                "text-base font-medium text-foreground uppercase",
+                "text-base font-medium text-foreground uppercase tracking-wide",
                 linesClassname
               )}
             >

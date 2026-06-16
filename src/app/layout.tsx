@@ -4,12 +4,24 @@ import Navbar from "@/components/navbar";
 import ServiceWorkerRegister from "@/components/service-worker-register";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider } from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
-import { Inconsolata } from "next/font/google";
+import { Inconsolata, Inter, Lora } from "next/font/google";
 import "./globals.css";
 
-const font = Inconsolata({
+const bodyFont = Inter({
   subsets: ["latin"],
+  variable: "--font-body",
+});
+
+const displayFont = Lora({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
+
+const monoFont = Inconsolata({
+  subsets: ["latin"],
+  variable: "--font-mono-num",
 });
 
 export const metadata: Metadata = {
@@ -34,7 +46,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#27548a",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f5e9de" },
+    { media: "(prefers-color-scheme: dark)", color: "#1d140f" },
+  ],
 };
 
 export default function RootLayout({
@@ -46,14 +61,21 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={`${font.className} antialiased flex flex-col min-h-screen`}
+        className={cn(
+          bodyFont.variable,
+          displayFont.variable,
+          monoFont.variable,
+          "font-sans antialiased flex flex-col min-h-screen"
+        )}
       >
         <ThemeProvider attribute="class" enableSystem={false}>
           <SidebarProvider defaultOpen={false}>
             <AppSidebar />
             <main className="w-full">
               <Navbar />
-              <main className="flex-grow">{children}</main>
+              <main className="grow flex justify-center">
+                <div className="w-full max-w-3xl">{children}</div>
+              </main>
               <Footer />
             </main>
           </SidebarProvider>

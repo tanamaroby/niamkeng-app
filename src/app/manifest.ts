@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Chant texts and audio for Flourishing Buddhist Center practices — read along while you listen.",
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
-    theme_color: "#27548a",
+    background_color: "#fbf4eb",
+    theme_color: "#c66000",
     icons: [
       {
         src: "/icon-192x192.png",

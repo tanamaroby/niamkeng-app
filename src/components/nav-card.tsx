@@ -12,21 +12,26 @@ interface NavCardProps {
 
 const NavCard: FC<NavCardProps> = ({ title, subtitle, href }) => {
   return (
-    <Card className="w-full">
-      <CardHeader>
-        <div className="flex items-center justify-between gap-4">
-          <div className="flex flex-col gap-2">
-            <CardTitle>{title}</CardTitle>
-            <CardDescription>{subtitle}</CardDescription>
-          </div>
-          <Link href={href}>
-            <Button size="icon" className="rounded-full">
-              <Play fill="white" />
+    <Link href={href} className="w-full block group">
+      <Card className="w-full transition-colors hover:border-primary/50 hover:bg-accent/40">
+        <CardHeader>
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex flex-col gap-1.5">
+              <CardTitle className="font-serif text-lg">{title}</CardTitle>
+              <CardDescription>{subtitle}</CardDescription>
+            </div>
+            <Button
+              size="icon"
+              className="rounded-full shrink-0 group-hover:scale-105 transition-transform"
+              tabIndex={-1}
+              aria-hidden
+            >
+              <Play className="fill-primary-foreground" />
             </Button>
-          </Link>
-        </div>
-      </CardHeader>
-    </Card>
+          </div>
+        </CardHeader>
+      </Card>
+    </Link>
   );
 };
 

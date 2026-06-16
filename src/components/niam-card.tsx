@@ -16,23 +16,20 @@ const NiamCard: FC<NiamCardProps> = ({
   linesClassname,
 }) => {
   return (
-    <div
-      className={cn(
-        "w-full p-6 rounded-xl border transition-all duration-300",
-        "bg-muted/70 shadow-lg"
-      )}
-    >
-      <CardHeader className="flex flex-col items-center text-center space-y-1 mb-4">
-        <CardTitle className="text-2xl font-semibold text-primary">
+    <div className="w-full p-6 sm:p-7 rounded-2xl border bg-card shadow-sm">
+      <CardHeader className="flex flex-col items-center text-center gap-1 mb-4 px-0">
+        <CardTitle className="font-serif text-xl sm:text-2xl font-semibold text-primary">
           {title}
         </CardTitle>
-        {chinese && <p className="text-sm italic">{chinese}</p>}
+        {chinese && (
+          <p className="text-sm italic text-muted-foreground">{chinese}</p>
+        )}
       </CardHeader>
-      <CardContent className="flex flex-col items-center gap-2">
+      <CardContent className="flex flex-col items-center gap-2.5 px-0">
         {lines.map((line) => (
           <p
             className={cn(
-              "text-base font-medium text-center text-foreground uppercase",
+              "text-base font-medium text-center text-foreground uppercase tracking-wide",
               linesClassname
             )}
             key={`${title}-${line}`}

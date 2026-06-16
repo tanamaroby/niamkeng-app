@@ -1,16 +1,18 @@
 export default function Footer() {
   return (
-    <footer className="p-6 w-full bg-sidebar flex flex-col items-center text-center text-sm space-y-2">
-      <div className="flex items-center gap-1 text-sm">
-        <span>Dedicated to</span>
-        <span className="font-extrabold text-base">Passang Rinpoche</span>
-      </div>
-      <div className="flex items-center gap-1">
-        <span className="text-sm">From</span>
-        <span className="text-red-500 font-medium animate-pulse hover:animate-none transition">
+    <footer className="px-6 py-8 w-full bg-sidebar border-t border-sidebar-border flex flex-col items-center text-center gap-1.5 text-sidebar-foreground/70">
+      <p className="text-sm">
+        Dedicated to{" "}
+        <span className="font-serif font-semibold text-sidebar-foreground">
+          Passang Rinpoche
+        </span>
+      </p>
+      <p className="text-sm">
+        From{" "}
+        <span className="font-medium text-primary animate-pulse hover:animate-none transition">
           Julia Kurniawan ❤️
         </span>
-      </div>
+      </p>
     </footer>
   );
 }
