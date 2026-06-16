@@ -469,7 +469,7 @@ export const DEDICATION_PRAYER: StaticCardProps = {
       content: "Te Ta Ken Kie Zi Hse Dag Stor Sier",
     },
     {
-      content: "Ge Wa De Tag Tham Ciet Reb Tef Ngo",
+      content: "Ge Wa De Tag Tham Ciet Reb Te Ngo",
     },
     {
       content: "Ti Shem Siag Per Ziel Wa Tham Ciet Ki",
@@ -481,7 +481,7 @@ export const DEDICATION_PRAYER: StaticCardProps = {
       content: "Dag Ke Gi Va Ca Wa De Ken Kyong",
     },
     {
-      content: "Zong Po Siug Sier Reb Te Fngo Ver Jieh",
+      content: "Zong Po Siug Sier Reb Te Ngo Ver Jieh",
     },
   ],
 };
